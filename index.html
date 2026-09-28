@@ -3,37 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Romera Braojos | Portfolio</title>
+    <title>Mario Romera | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Mario Romera Braojos</h1>
-        <p>Administrador de Sistemas Informáticos en Red | Infraestructura IT y Redes</p>
-    </header>
 
-    <main>
-        <section>
-            <h2>Sobre mí</h2>
-            <p>Especializado en la administración de infraestructuras, soporte técnico y redes. Priorizo la eficiencia técnica mediante la automatización, la seguridad defensiva y un enfoque minimalista en la resolución de problemas.</p>
+
+
+    <main class="container">
+        
+        <section class="hero">
+            <div class="hero-image">
+                <img src="foto.jpeg" alt="Mario Romera">
+            </div>
+            
+            <div class="hero-content">
+                <h1>Hola!</h1>
+                <p>Soy Mario, formado en ASIR y apasionado por la tecnología, los sistemas y la ciberseguridad. 
+                    Me gusta descubrir, aprender y experimentar con nuevas herramientas y tecnologías.</p>
+                
+                <div class="hero-actions">
+                    <a href="https://linkedin.com/in/marioromerabraojos" target="_blank" class="btn-primary">Mi LinkedIn</a>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/marioromera" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@marioromera" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="mailto:contacto@marioromera.com" title="Enviar correo"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Tecnologías y Certificaciones</h2>
-            <ul>
-                <li><strong>Virtualización y Contenedores:</strong> Proxmox VE, QEMU/KVM, Docker</li>
-                <li><strong>Redes y Conectividad:</strong> Cisco CCNA, Cloudflare, Tailscale, WireGuard</li>
-                <li><strong>Sistemas Operativos:</strong> Linux, macOS, Windows</li>
-                <li><strong>Certificaciones:</strong> Cisco CCNA (Introduction to Networks), Microsoft Azure AI-900</li>
-            </ul>
+
+        <section class="footer-grid">
+            <div class="footer-col">
+                <h3>Sobre mí</h3>
+                <p>En mi tiempo libre la fotografía y el vídeo son mi forma de explorar mi lado más creativo</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Stack & Certificaciones</h3>
+                <p class="contact-text">
+                    Cisco CCNA • Microsoft Azure AI-900<br>
+                    Windows Server • Ubuntu Server <br>
+                    Tailscale • Cloudflare
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>¿Quieres contactarme?</h3>
+                <p>Si tienes un proyecto en mente o una oportunidad profesional, hablemos directamente.</p>
+                <a href="mailto:contacto@marioromera.com?subject=Contacto desde el Portfolio" class="btn-secondary">Envíame un correo</a>
+            </div>
         </section>
 
-        <section>
-            <h2>Proyectos Destacados</h2>
-            <ul>
-                <li><strong>FoxEngine:</strong> Arquitectura de ejecución administrativa remota integrando un modelo de IA local (Ollama) con un cliente móvil en React Native y bot de Telegram.</li>
-            </ul>
-        </section>
     </main>
+
 </body>
 </html>
