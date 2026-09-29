@@ -3,59 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Romera | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+    <title>Mario Romera Braojos | Portfolio</title>
+    
+    <!-- Google Fonts: Inter for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons for minimalist UI icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bgLight: '#f5f5f5',
+                        bgCard: '#ececec',
+                        textDark: '#333333',
+                        textMuted: '#777777',
+                    }
+                }
+            }
+        }
+    </script>
 
-
-    <main class="container">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333333;
+            -webkit-font-smoothing: antialiased;
+        }
         
-        <section class="hero">
-            <div class="hero-image">
-                <img src="foto.jpeg" alt="Mario Romera">
-            </div>
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5f5f5; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ececec; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #777777; 
+        }
+    </style>
+</head>
+<body class="font-sans leading-relaxed selection:bg-textMuted selection:text-bgLight">
+
+    <main class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        
+        <header class="text-center mb-20 fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-textDark mb-3">MARIO ROMERA BRAOJOS</h1>
+            <p class="text-lg md:text-xl text-textMuted font-light max-w-2xl mx-auto mb-8">
+                Técnico de Sistemas y Redes | Infraestructura IT & Virtualización
+            </p>
             
-            <div class="hero-content">
-                <h1>Hola!</h1>
-                <p>Soy Mario, formado en ASIR y apasionado por la tecnología, los sistemas y la ciberseguridad. 
-                    Me gusta descubrir, aprender y experimentar con nuevas herramientas y tecnologías.</p>
-                
-                <div class="hero-actions">
-                    <a href="https://linkedin.com/in/marioromerabraojos" target="_blank" class="btn-primary">Mi LinkedIn</a>
-                    <div class="social-icons">
-                        <a href="https://instagram.com/marioromera" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://tiktok.com/@marioromera" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="mailto:contacto@marioromera.com" title="Enviar correo"><i class="fa-regular fa-envelope"></i></a>
+            <!-- Social Buttons -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="group flex items-center gap-2 px-5 py-2.5 bg-bgCard hover:bg-textDark hover:text-bgLight text-textDark transition-all duration-300 rounded-full text-sm font-medium border border-transparent hover:border-textDark shadow-sm">
+                    <i class="ph ph-linkedin-logo text-lg group-hover:text-bgLight"></i> LinkedIn
+                </a>
+                <a href="#" class="group flex items-center gap-2 px-5 py-2.5 bg-bgCard hover:bg-textDark hover:text-bgLight text-textDark transition-all duration-300 rounded-full text-sm font-medium border border-transparent hover:border-textDark shadow-sm">
+                    <i class="ph ph-youtube-logo text-lg group-hover:text-bgLight"></i> YouTube
+                </a>
+                <a href="#" class="group flex items-center gap-2 px-5 py-2.5 bg-bgCard hover:bg-textDark hover:text-bgLight text-textDark transition-all duration-300 rounded-full text-sm font-medium border border-transparent hover:border-textDark shadow-sm">
+                    <i class="ph ph-tiktok-logo text-lg group-hover:text-bgLight"></i> TikTok
+                </a>
+                <a href="#" class="group flex items-center gap-2 px-5 py-2.5 bg-bgCard hover:bg-textDark hover:text-bgLight text-textDark transition-all duration-300 rounded-full text-sm font-medium border border-transparent hover:border-textDark shadow-sm">
+                    <i class="ph ph-instagram-logo text-lg group-hover:text-bgLight"></i> Instagram
+                </a>
+            </div>
+        </header>
+
+        <section class="mb-20 fade-in delay-1">
+            <h2 class="text-xs uppercase tracking-widest text-textMuted font-semibold mb-6 flex items-center gap-3">
+                <span class="w-8 h-px bg-textMuted"></span> Perfil Profesional
+            </h2>
+            <div class="bg-bgCard p-8 rounded-2xl">
+                <p class="text-textDark font-light leading-relaxed">
+                    Técnico Superior en Administración de Sistemas Informáticos en Red (ASIR) con sólida base técnica en infraestructura IT, virtualización y gestión de redes. Cuento con una trayectoria profesional internacional consolidada en <strong>Polonia y Malta</strong>, donde he perfeccionado mi capacidad para adaptarme a entornos tecnológicos dinámicos y trabajar bajo estándares europeos. Orientado a la resolución de problemas y a la eficiencia en el soporte de sistemas, busco aportar mi proactividad a proyectos de infraestructura IT.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20 fade-in delay-2">
+            <h2 class="text-xs uppercase tracking-widest text-textMuted font-semibold mb-8 flex items-center gap-3">
+                <span class="w-8 h-px bg-textMuted"></span> Experiencia Laboral
+            </h2>
+            
+            <div class="space-y-12">
+                <!-- Job 1 -->
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 group">
+                    <div class="md:w-1/4 flex-shrink-0 text-textMuted text-sm pt-1">
+                        Feb 2026 - May 2026<br>
+                        <span class="text-xs">Wrocław, Polonia</span>
+                    </div>
+                    <div class="md:w-3/4 pb-8 md:pb-0 md:border-l-2 md:border-bgCard md:pl-8 group-hover:border-textMuted transition-colors">
+                        <h3 class="text-lg font-medium text-textDark">Técnico de Sistemas en Prácticas (ASIR) - Erasmus</h3>
+                        <h4 class="text-textMuted mb-3">Ulan Software</h4>
+                        <ul class="list-disc list-outside ml-4 text-sm font-light text-textDark space-y-2 marker:text-textMuted">
+                            <li>Auditoría y fortificación de infraestructura web en producción mediante técnicas de pentesting.</li>
+                            <li>Detección y mitigación de vulnerabilidades de red, documentando los procesos para mejorar la arquitectura.</li>
+                            <li>Trabajo diario en un equipo técnico internacional bajo estándares europeos, operando fluidamente en inglés.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 group">
+                    <div class="md:w-1/4 flex-shrink-0 text-textMuted text-sm pt-1">
+                        Mayo 2025<br>
+                        <span class="text-xs">Granada, España</span>
+                    </div>
+                    <div class="md:w-3/4 pb-8 md:pb-0 md:border-l-2 md:border-bgCard md:pl-8 group-hover:border-textMuted transition-colors">
+                        <h3 class="text-lg font-medium text-textDark">Técnico de Sistemas en Prácticas (ASIR) - Dual</h3>
+                        <h4 class="text-textMuted mb-3">Agencia Tributaria</h4>
+                        <ul class="list-disc list-outside ml-4 text-sm font-light text-textDark space-y-2 marker:text-textMuted">
+                            <li>Configuración, despliegue e instalación de equipos con Windows 11 en entorno corporativo.</li>
+                            <li>Gestión y actualización de inventario de activos IT en base de datos.</li>
+                            <li>Soporte técnico interno a usuarios, resolviendo incidencias de hardware y software.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 group">
+                    <div class="md:w-1/4 flex-shrink-0 text-textMuted text-sm pt-1">
+                        Abr 2024 - Jul 2024<br>
+                        <span class="text-xs">Malta</span>
+                    </div>
+                    <div class="md:w-3/4 pb-2 md:border-l-2 md:border-bgCard md:pl-8 group-hover:border-textMuted transition-colors">
+                        <h3 class="text-lg font-medium text-textDark">Técnico de Sistemas en Prácticas (SMR) - Erasmus</h3>
+                        <h4 class="text-textMuted mb-3">Atom I.T Repairs</h4>
+                        <ul class="list-disc list-outside ml-4 text-sm font-light text-textDark space-y-2 marker:text-textMuted">
+                            <li>Montaje, instalación y mantenimiento de equipos informáticos en taller técnico internacional.</li>
+                            <li>Atención técnica directa a clientes en inglés, en un entorno de trabajo multicultural.</li>
+                            <li>Diagnóstico, reparación y configuración de hardware y software.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 fade-in delay-3">
+            <!-- Education -->
+            <section>
+                <h2 class="text-xs uppercase tracking-widest text-textMuted font-semibold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-px bg-textMuted"></span> Formación Académica
+                </h2>
+                <div class="space-y-6">
+                    <div class="bg-bgCard p-5 rounded-xl border border-transparent hover:border-textMuted transition-colors">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-textDark text-sm">Grado Superior (ASIR)</h3>
+                            <span class="text-xs text-textMuted">2024 - 2026</span>
+                        </div>
+                        <p class="text-xs text-textMuted font-light">Administración de Sistemas Informáticos en Red<br>Nota Media: 8.19</p>
+                    </div>
+                    
+                    <div class="bg-bgCard p-5 rounded-xl border border-transparent hover:border-textMuted transition-colors">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-textDark text-sm">Grado Medio (SMR)</h3>
+                            <span class="text-xs text-textMuted">2022 - 2024</span>
+                        </div>
+                        <p class="text-xs text-textMuted font-light">Sistemas Microinformáticos y Redes<br>Nota Media: 8.09</p>
+                    </div>
+                </div>
+            </section>
 
-        <section class="footer-grid">
-            <div class="footer-col">
-                <h3>Sobre mí</h3>
-                <p>En mi tiempo libre la fotografía y el vídeo son mi forma de explorar mi lado más creativo</p>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Stack & Certificaciones</h3>
-                <p class="contact-text">
-                    Cisco CCNA • Microsoft Azure AI-900<br>
-                    Windows Server • Ubuntu Server <br>
-                    Tailscale • Cloudflare
-                </p>
-            </div>
+            <!-- Certifications -->
+            <section>
+                <h2 class="text-xs uppercase tracking-widest text-textMuted font-semibold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-px bg-textMuted"></span> Certificaciones
+                </h2>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 text-sm text-textDark bg-bgCard py-3 px-4 rounded-lg">
+                        <i class="ph ph-certificate text-textMuted text-lg"></i>
+                        <span class="font-light">Microsoft AI-900: Azure AI Fundamentals</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-textDark bg-bgCard py-3 px-4 rounded-lg">
+                        <i class="ph ph-certificate text-textMuted text-lg"></i>
+                        <span class="font-light">Iniciación a las Redes - CISCO Networking Academy</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-textDark bg-bgCard py-3 px-4 rounded-lg">
+                        <i class="ph ph-certificate text-textMuted text-lg"></i>
+                        <span class="font-light">Inteligencia Artificial y Productividad - Google</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-sm text-textDark bg-bgCard py-3 px-4 rounded-lg">
+                        <i class="ph ph-drone text-textMuted text-lg"></i>
+                        <span class="font-light">Certificación A1 y A3 para pilotaje de drones</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
 
-            <div class="footer-col">
-                <h3>¿Quieres contactarme?</h3>
-                <p>Si tienes un proyecto en mente o una oportunidad profesional, hablemos directamente.</p>
-                <a href="mailto:contacto@marioromera.com?subject=Contacto desde el Portfolio" class="btn-secondary">Envíame un correo</a>
+        <section class="mb-20 fade-in delay-4">
+            <h2 class="text-xs uppercase tracking-widest text-textMuted font-semibold mb-6 flex items-center gap-3">
+                <span class="w-8 h-px bg-textMuted"></span> Más Allá de la Pantalla (Aficiones)
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Photography -->
+                <div class="group bg-bgCard p-8 rounded-2xl flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-16 h-16 rounded-full bg-textDark text-bgLight flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="ph ph-camera text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-textDark mb-3">Fotografía</h3>
+                    <p class="text-sm font-light text-textMuted">
+                        En mi tiempo libre, me apasiona capturar el mundo a través de mi lente, enfocándome principalmente en la fotografía de paisajes y entornos exteriores, buscando siempre la mejor luz y composición.
+                    </p>
+                </div>
+
+                <!-- Video Editing -->
+                <div class="group bg-bgCard p-8 rounded-2xl flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-16 h-16 rounded-full bg-textDark text-bgLight flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="ph ph-film-strip text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-textDark mb-3">Creación de Vídeo</h3>
+                    <p class="text-sm font-light text-textMuted">
+                        Disfruto de la narrativa visual a través del vídeo. Me dedico a la creación y edición de piezas audiovisuales utilizando herramientas profesionales como DaVinci Resolve para lograr acabados cinematográficos.
+                    </p>
+                </div>
             </div>
         </section>
+
+        <footer class="pt-8 border-t border-bgCard flex flex-col md:flex-row justify-between items-center gap-4 fade-in delay-5 text-sm text-textMuted font-light">
+            <p>&copy; 2026 Mario Romera Braojos. Todos los derechos reservados.</p>
+            <div class="flex gap-4">
+                <a href="mailto:contacto@marioromera.com" class="hover:text-textDark transition-colors flex items-center gap-1">
+                    <i class="ph ph-envelope-simple"></i> contacto@marioromera.com
+                </a>
+            </div>
+        </footer>
 
     </main>
 
